@@ -1,0 +1,146 @@
+USE [GymManagementSystem]
+GO
+
+/****** Object:  Table [dbo].[InstructorTable]     ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[InstructorTable](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[TrainerId] [nvarchar](50) NULL,
+	[TrainerName] [nvarchar](50) NULL,
+	[Schedule] [nvarchar](50) NULL,
+	[Salary] [nvarchar](50) NULL
+) ON [PRIMARY]
+
+GO
+
+USE [GymManagementSystem]
+GO
+
+/****** Object:  Table [dbo].[InstrumentTable]     ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[InstrumentTable](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Instrument] [nvarchar](50) NULL,
+	[Company] [nvarchar](50) NULL,
+	[TotalQuantity] [nvarchar](50) NULL,
+	[Price] [nvarchar](50) NULL,
+	[TotalPrice] [nvarchar](50) NULL,
+	[EnterDate] [date] NULL
+) ON [PRIMARY]
+
+GO
+
+USE [GymManagementSystem]
+GO
+
+/****** Object:  Table [dbo].[MemberTable]     ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[MemberTable](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[FirstName] [nvarchar](50) NULL,
+	[LastName] [nvarchar](50) NULL,
+	[ContactNo] [nvarchar](50) NULL,
+	[PlanType] [nvarchar](50) NULL,
+	[DateOfJoining] [date] NULL,
+	[Amount] [nvarchar](50) NULL,
+	[Address] [nvarchar](max) NULL
+) ON [PRIMARY]
+
+GO
+
+USE [GymManagementSystem]
+GO
+
+/****** Object:  Table [dbo].[PlanTypeTable]     ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[PlanTypeTable](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[PlanType] [nvarchar](50) NULL,
+	[Amount] [nvarchar](50) NULL
+) ON [PRIMARY]
+
+GO
+
+USE [GymManagementSystem]
+GO
+
+/****** Object:  Table [dbo].[TrainerTable]     ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[TrainerTable](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[TrainerId] [nvarchar](50) NULL,
+	[TrainerName] [nvarchar](50) NULL,
+	[MobileNo] [nvarchar](10) NULL,
+	[Address] [nvarchar](max) NULL
+) ON [PRIMARY]
+
+GO
+
+USE [GymManagementSystem]
+GO
+
+/****** Object:  Table [dbo].[UserTable]     ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[UserTable](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[TrainerId] [nvarchar](50) NULL,
+	[TrainerName] [nvarchar](50) NULL,
+	[UserName] [nvarchar](50) NULL,
+	[Password] [nvarchar](50) NULL
+) ON [PRIMARY]
+
+GO
+
+USE [GymManagementSystem]
+GO
+
+/****** Object:  Table [dbo].[TransactionTable]     ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[TransactionTable](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[MemberId] [nvarchar](50) NULL,
+	[Name] [nvarchar](50) NULL,
+	[PlanType] [nvarchar](50) NULL,
+	[DateOfJoining] [date] NULL,
+	[Amount] [nvarchar](50) NULL,
+	[PayAmount] [nvarchar](50) NULL,
+	[Date] [date] NULL
+) ON [PRIMARY]
+
+GO
+
